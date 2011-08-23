@@ -1,0 +1,12 @@
+<stack>
+  <description brief="turtlebot_rcommander">turtlebot_rcommander</description>
+  <author>Maintained by Elena Oleynikova</author>
+  <license>BSD</license>  
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/turtlebot_rcommander</url>
+  <depend stack="executive_smach" /> <!-- smach -->
+  <depend stack="ros" />
+  <depend stack="ros_comm" /> <!-- rospy -->
+  <depend stack="turtlebot_apps" /> <!-- turtlebot_actions -->
+
+</stack>

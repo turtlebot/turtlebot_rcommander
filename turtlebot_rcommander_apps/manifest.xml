@@ -1,0 +1,18 @@
+<package>
+  <description brief="turtlebot_rcommander_apps">
+
+     turtlebot_rcommander_apps
+
+  </description>
+  <author>Elena Oleynikova</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/rcommander_turtlebot_apps</url>
+  
+  <depend package="rcommander"/>
+  <depend package="smach"/>
+  <depend package="rospy"/>
+ 
+</package>
+
+

@@ -1,0 +1,20 @@
+<package>
+  <description brief="turtlebot_rcommander_tools">
+
+     turtlebot_rcommander_tools
+
+  </description>
+  <author>Elena Oleynikova</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/turtlebot_rcommander_tools</url>
+  <depend package="rcommander"/>
+  <depend package="turtlebot_actions"/>
+  
+  <export>
+    <rcommander plugin="rcommander_turtlebot.turtlebot_move_tool" robot="turtlebot" tab="Navigation"/>
+  </export>
+
+</package>
+
+
