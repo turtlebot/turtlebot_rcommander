@@ -18,9 +18,9 @@ class TurtlebotMoveTool(tu.ToolBase):
         #Left or right
         #self.radio_boxes, self.radio_buttons = tu.make_radio_box(pbox, ['Left', 'Right'], 'gripper_arm')
         #Opening distance
-        self.forward_box = tu.SliderBox(pbox, 0., 10., 0., 0., 'forward', units='m')
+        self.forward_box = tu.SliderBox(pbox, 0., 10., 0., 100, 'forward', units='m')
         #Effort
-        self.turn_box = tu.SliderBox(pbox, -3.14, 3.14, 0., 0., 'turn', units='rad')
+        self.turn_box = tu.SliderBox(pbox, 0, 3.14, -3.14, 100, 'turn', units='rad')
 
         #formlayout.addRow('&Side', self.radio_boxes)
         formlayout.addRow('&Move Forward', self.forward_box.container)
@@ -52,7 +52,6 @@ class TurtlebotMoveTool(tu.ToolBase):
         self.forward_box.set_value(0.0)
         self.turn_box.set_value(0.0)
 
-
 class TurtlebotMoveState(tu.SimpleStateBase): # smach_ros.SimpleActionState):
 
     def __init__(self, name, forward, turn):
@@ -79,4 +78,3 @@ class TurtlebotMoveState(tu.SimpleStateBase): # smach_ros.SimpleActionState):
     def __setstate__(self, state):
         tu.SimpleStateBase.__setstate__(self, state['simple_state'])
         self.forward, self.turn = state['self']
-
