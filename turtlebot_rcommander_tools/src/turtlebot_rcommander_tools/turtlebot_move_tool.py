@@ -44,19 +44,13 @@ class TurtlebotMoveTool(tu.ToolBase):
             nname = name
         return TurtlebotMoveState(nname, forward, turn)
     
-    def set_node_properties(self, gripper_state):
-        if gripper_state.arm == 'left':
-            self.radio_buttons[0].setChecked(True)
-        if gripper_state.arm == 'right':
-            self.radio_buttons[1].setChecked(True)
-
-        self.gripper_box.set_value(gripper_state.gripper_size)
-        self.effort_box.set_value(gripper_state.effort)
+    def set_node_properties(self, move_state):
+        self.forward_box.set_value(move_state.forward)
+        self.turn_box.set_value(move_state.turn)
 
     def reset(self):
-        self.gripper_box.set_value(0.0)
-        self.effort_box.set_value(50.)
-        self.radio_buttons[0].setChecked(True)
+        self.forward_box.set_value(0.0)
+        self.turn_box.set_value(0.0)
 
 
 class TurtlebotMoveState(tu.SimpleStateBase): # smach_ros.SimpleActionState):
