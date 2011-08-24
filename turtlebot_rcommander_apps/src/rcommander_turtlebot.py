@@ -1,5 +1,5 @@
 #!/usr/bin/python
-import roslib; roslib.load_manifest('rcommander_turtlebot')
+import roslib; roslib.load_manifest('turtlebot_rcommander_apps')
 import rcommander.rcommander as rc
 import rospy
 import tf 
