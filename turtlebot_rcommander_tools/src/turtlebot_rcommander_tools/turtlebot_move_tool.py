@@ -1,4 +1,4 @@
-import roslib; roslib.load_manifest('rcommander_turtlebot')
+import roslib; roslib.load_manifest('turtlebot_rcommander_tools')
 import rcommander.tool_utils as tu
 from PyQt4.QtGui import *
 from PyQt4.QtCore import *

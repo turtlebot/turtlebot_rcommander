@@ -12,7 +12,7 @@
   <depend package="turtlebot_actions"/>
   
   <export>
-    <rcommander plugin="rcommander_turtlebot.turtlebot_move_tool" robot="turtlebot" tab="Navigation"/>
+    <rcommander plugin="turtlebot_rcommander_tools.turtlebot_move_tool" robot="turtlebot" tab="Navigation"/>
   </export>
 
 </package>
