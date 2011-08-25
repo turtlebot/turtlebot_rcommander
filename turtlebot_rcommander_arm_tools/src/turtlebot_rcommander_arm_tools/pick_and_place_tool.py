@@ -5,7 +5,7 @@ from PyQt4.QtCore import *
 import time
 import functools as ft
 import turtlebot_block_manipulation.msg as pm
-import geometry_msgs.msg as fuckthisshit
+import geometry_msgs.msg as gm
 
 class PickAndPlaceTool(tu.ToolBase):
 
@@ -81,7 +81,7 @@ class PickAndPlaceState(tu.SimpleStateBase):
         self.topic = topic
 
     def ros_goal(self, userdata, default_goal):
-        return pm.PickAndPlaceGoal(self.frame, self.z_down, self.z_up, self.gripper_open, self.gripper_closed, fuckthisshit.Pose(), fuckthisshit.Pose(), self.topic)
+        return pm.PickAndPlaceGoal(self.frame, self.z_down, self.z_up, self.gripper_open, self.gripper_closed, gm.Pose(), gm.Pose(), self.topic)
 
     def __getstate__(self):
         state = tu.SimpleStateBase.__getstate__(self)
