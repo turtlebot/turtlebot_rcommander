@@ -13,6 +13,7 @@
   
   <export>
     <rcommander plugin="turtlebot_rcommander_tools.turtlebot_move_tool" robot="turtlebot" tab="Navigation"/>
+    <rcommander plugin="turtlebot_rcommander_tools.find_fiducial_tool" robot="turtlebot" tab="Perception"/>
   </export>
 
 </package>
