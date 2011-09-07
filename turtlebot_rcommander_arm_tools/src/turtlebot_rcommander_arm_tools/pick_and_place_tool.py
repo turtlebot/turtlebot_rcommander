@@ -19,8 +19,8 @@ class PickAndPlaceTool(tu.ToolBase):
         formlayout = pbox.layout()
         self.frame = QLineEdit(pbox)
         self.frame.setText(PickAndPlaceTool.DEFAULT_FRAME)
-        self.z_down_box = tu.SliderBox(pbox, -0.04, 1.0, -1.0, 1000, 'z_down', units='m')
-        self.z_up_box = tu.SliderBox(pbox, 0.08, 1.0, -1.0, 1000, 'z_up', units='m')
+        self.z_down_box = tu.SliderBox(pbox, -0.05, 0.25, -0.15, 1000, 'z_down', units='m')
+        self.z_up_box = tu.SliderBox(pbox, 0.08, 0.25, -0.15, 1000, 'z_up', units='m')
         self.g_open_box = tu.SliderBox(pbox, 0.042, 0.1, 0.0, 1000, 'g_open', units='m')
         self.g_closed_box = tu.SliderBox(pbox, 0.024, 0.1, 0.0, 1000, 'g_closed', units='m')
         self.topic = QLineEdit(pbox)
@@ -58,7 +58,7 @@ class PickAndPlaceTool(tu.ToolBase):
 
     def reset(self):
         self.frame.setText(PickAndPlaceTool.DEFAULT_FRAME)
-        self.z_down_box.set_value(-0.04)
+        self.z_down_box.set_value(-0.05)
         self.z_up_box.set_value(0.08)
         self.g_open_box.set_value(0.042)
         self.g_closed_box.set_value(0.024)

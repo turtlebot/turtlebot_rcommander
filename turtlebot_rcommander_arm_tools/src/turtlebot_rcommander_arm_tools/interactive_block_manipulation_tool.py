@@ -17,7 +17,7 @@ class InteractiveBlockManipulationTool(tu.ToolBase):
         formlayout = pbox.layout()
         self.frame = QLineEdit(pbox)
         self.frame.setText(InteractiveBlockManipulationTool.DEFAULT_TEXT)
-        self.block_box = tu.SliderBox(pbox, 0.0127, 0.5, 0., 100, 'block_size', units='m')
+        self.block_box = tu.SliderBox(pbox, 0.03, 0.1, 0., 1000, 'block_size', units='m')
 
         formlayout.addRow('&Detection Frame', self.frame)
         formlayout.addRow('&Block Size', self.block_box.container)
@@ -39,7 +39,7 @@ class InteractiveBlockManipulationTool(tu.ToolBase):
 
     def reset(self):
         self.frame.setText(InteractiveBlockManipulationTool.DEFAULT_TEXT)
-        self.block_box.set_value(0.0127)
+        self.block_box.set_value(0.03)
 
 class InteractiveBlockManipulationState(tu.SimpleStateBase):
 
