@@ -17,7 +17,7 @@ class BlockDetectionTool(tu.ToolBase):
         formlayout = pbox.layout()
         self.frame = QLineEdit(pbox)
         self.frame.setText(BlockDetectionTool.DEFAULT_TEXT)
-        self.table_box = tu.SliderBox(pbox, -0.05, 0.25, -0.15, 1000, 'table_height', units='m')
+        self.table_box = tu.SliderBox(pbox, 0.01, 0.25, -0.15, 1000, 'table_height', units='m')
         self.block_box = tu.SliderBox(pbox, 0.03, 0.1, 0., 1000, 'block_size', units='m')
 
         formlayout.addRow('&Detection Frame', self.frame)
@@ -43,7 +43,7 @@ class BlockDetectionTool(tu.ToolBase):
 
     def reset(self):
         self.frame.setText(BlockDetectionTool.DEFAULT_TEXT)
-        self.table_box.set_value(-0.05)
+        self.table_box.set_value(0.01)
         self.block_box.set_value(0.03)
 
 class BlockDetectionState(tu.SimpleStateBase):
